@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Alnafi Center</title>
+  <link rel="stylesheet" type="text/css"  href="../static/style.css" />
+
+
+<style>
+table
+{ margin: 10px 0 30px 0;}
+
+table tr th, table tr td
+{ background: #3B3B3B;
+  color: #FFF;
+  padding: 7px 4px;
+  text-align: left;}
+
+table tr td
+{ background: #E5E5DB;
+  color: #47433F;
+  border-top: 1px solid #FFF;}
+
+  nav {
+    display: block;
+    text-align: center;
+  }
+  nav ul {
+    margin: 0;
+    padding:0;
+    list-style: none;
+  }
+  .nav a {
+    display:block;
+    background: black;
+    color:#fff;
+    text-decoration: none;
+    padding: .8em 1.8em;
+    text-transform: uppercase;
+    font-size: 90%;letter-spacing: 2px;
+    text-shadow: 0 -1px 0 #000;
+    position: relative;
+  }
+  .nav{
+    vertical-align: top;
+    display: inline-block;
+    box-shadow: 1px -1px -1px 1px #000, -1px 1px -1px 1px black, 0 0 6px 3px black;
+    border-radius:6px;
+  }
+  .nav li{position: relative;}
+  .nav > li {
+    float:left;
+    border-bottom: 4px #aaa solid;
+    margin-right: 1px;
+  }
+  .nav > li > a {
+    margin-bottom:1px;
+    box-shadow:inset 0 2em .33em -.5em #555;
+  }
+  .nav > li:hover , .nav > li:hover >a{  border-bottom-color:#E4EC04;}
+  .nav li:hover > a { color:#E4EC04; }
+  .nav > li:first-child  { border-radius: 4px 0 0 4px;}
+  .nav > li:first-child>a{border-radius: 4px 0 0 0;}
+  .nav > li:last-child  {
+    border-radius: 0 0 4px 0;
+    margin-right: 0;
+  }
+  .nav > li:last-child >a{border-radius: 0 4px 0 0; }
+  .nav li li a { margin-top:1px}
+
+
+
+    .nav li a:first-child:nth-last-child(2):before {
+     content:"";
+     position: absolute;
+     height:0;
+     width: 0;
+     border: 5px solid transparent;
+     top: 50% ;
+     right:5px;
+   }
+
+
+
+
+
+   /* submenu positioning*/
+.nav ul {
+  position: absolute;
+  white-space: nowrap;
+  border-bottom: 5px solid  #E4EC04;
+  z-index: 1;
+  left: -99999em;
+}
+.nav > li:hover > ul {
+  left: auto;
+  padding-top: 5px  ;
+  min-width: 100%;
+}
+.nav > li li ul {  border-left:1px solid #fff;}
+
+
+.nav > li li:hover > ul {
+ /* margin-left: 1px */
+  left: 100%;
+  top: -1px;
+}
+/* arrow hover styling */
+.nav > li > a:first-child:nth-last-child(2):before {
+  border-top-color: #aaa;
+}
+.nav > li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent;
+  border-bottom-color: #E4EC04;
+  margin-top:-5px
+}
+.nav li li > a:first-child:nth-last-child(2):before {
+  border-left-color: #aaa;
+  margin-top: -5px
+}
+.nav li li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent;
+  border-right-color: #E4EC04;
+  right: 10px;
+}
+.form_settings select
+{ padding: 5px;
+  width: 311px;
+  font: 100% arial;
+  border: 1px solid #E5E5DB;
+  background: #FFF;
+  color: #47433F;}
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+
+
+        </div>
+      </div>
+      <nav>
+  <ul class="nav">
+    <li><a href=""><b>Home</b></a></li>
+	<li><a href="">Alnafi Tsheet</a></li>
+    <li><a href="#">Alert</a>
+      <ul>
+        <li><a href="">Alert1</a></li>
+        <li><a href="">Alert2</a></li>
+              </ul>
+    </li>
+    <li><a href="{{url_for('student_data')}}">Student Details</a>
+      <ul>
+     <li><a href="">Student Report</a></li>
+         <li><a href="{{url_for('student_data')}}">Student Details</a> </li>
+        <li><a href="">Report1</a> </li>
+        <li><a href="">Report2 </a></li>
+        <li><a href="">Report3</a></li>
+        <li><a href="">Report4</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Tools</a>
+      <ul>
+		<li><a href="">Jira Ticket</a></li>
+        <li><a href="">Tools2</a></li>
+        <li><a href="">Tools3</a></li>
+        <li><a href="">Tools4</a></li>
+
+      </ul>
+    </li>
+	<li><a href="#">Automation</a>
+      <ul>
+        <li><a href="">Automation1</a></li>
+        <li><a href="">Automation2</a></li>
+        <li><a href="">Automation3</a></li>
+
+      </ul>
+    </li>
+
+<li><a href="#">My profile</a>
+      <ul>
+        <li><a href="#">Welcome</a></li>
+        <li><a href="">Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+
+	<div style="position: relative; right:-155px;" class="form_settings">
+
+	<h1 style = "font-family:georgia,garamond,serif;font-size:20px;"><b>  DEENIYAT MAKTAB, KAHKASHAN MASJID,OKHLA VIHAR DELHI</b></h1>
+        <h1 style = "font-family:georgia,garamond,serif;font-size:20px;"><b> ADMISSION FORM</b></h1>
+    <form id="reused_form" method="post" action="{{ url_for('adm_form_create') }}" >
+
+                                       <p>
+                                            <span>Roll No.</span>
+                                            <select name="roll_no" class="form-control" id="roll_no" required>
+                                                <!-- JavaScript loop to generate age options -->
+                                                <script>
+                                                    for (let i = 1; i <= 1000; i++) {
+                                                        document.write(`<option value="${i}">${i}</option>`);
+                                                    }
+                                                </script>
+                                            </select>
+                                        </p>
+
+
+                                        <p><span> Student's Name </span>
+                                         <input type="text" name="student_name" required class="form-control" placeholder="Enter the name of student"> </p>
+
+                                       <p><span >Gender</span>
+                                        <select name="gender" class="form-control" id="gender" required>
+
+										  <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select></p>
+                                       <p><span >DOB</span>
+                                            <input type="date" id="date" name="dob" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" required> </p>
+
+                                       <p>
+                                       <script>
+                                            function convertDateFormat() {
+                                                var inputDate = document.getElementById('date').value;
+                                                var formattedDate = inputDate.split('/').reverse().join('-');
+                                                document.getElementById('date').value = formattedDate;
+                                            }
+                                        </script>
+                                        <span>Age</span>
+                                        <select name="age" class="form-control" id="age" required>
+                                            <!-- JavaScript loop to generate age options -->
+                                            <script>
+                                                for (let i = 1; i <= 20; i++) {
+                                                    document.write(`<option value="${i}">${i}</option>`);
+                                                }
+                                            </script>
+                                        </select>
+                                        </p>
+
+                                        <p><span> Mobile Number </span>
+                                        <input type="tel" id="phone_number" name="phone_number" placeholder="Enter mobile number" required> </p>
+
+                                       <p><span> Full Residential Address </span>
+                                         <input type="text" name="address" required class="form-control" placeholder="Enter full address"> </p>
+<br>
+                                       <p><span> Name of School </span>
+                                         <input type="text" name="school_name" required class="form-control" placeholder="Enter name of school"> </p>
+
+                                       <p><span> School Standard </span>
+                                         <input type="text" name="school_standard" required class="form-control" placeholder="Enter standard"> </p>
+
+                                       <p><span> Last class passed </span>
+                                         <input type="text" name="last_class_passed" required class="form-control" placeholder="Enter last class passes"> </p>
+<br>
+
+                                       <p><span> Parent Name </span>
+                                         <input type="text" name="parent_name" required class="form-control" placeholder="Enter parents name"> </p>
+
+                                       <p><span >Profession</span>
+                                        <select name="profession" class="form-control" id="course" required>
+
+										  <option value="Service">Service</option>
+                                            <option value="Business">Business</option>
+                                        </select></p>
+    <h1 style = "font-family:georgia,garamond,serif;font-size:15px;"><b>  Guardian Details  </b></h1>
+    <h3 style = "font-family:georgia;font-size:15px;"><b>  Person 1 </b></h3>
+
+                                       <p><span> Name </span>
+                                         <input type="text" name="guardian1_name"  class="form-control" placeholder="Enter first persons name"> </p>
+                                        <p><span> Tel. No. </span>
+                                         <input type="tel" id="guardian1_tel" name="guardian1_tel" placeholder="Enter mobile number" > </p>
+    <h3 style = "font-family:georgia;font-size:15px;"><b>  Person 2 </b></h3>
+                                       <p><span> Name </span>
+                                         <input type="text" name="guardian2_name"  class="form-control" placeholder="Enter second persons name"> </p>
+                                        <p><span> Tel. No. </span>
+                                         <input type="tel" id="guardian2_tel" name="guardian2_tel" placeholder="Enter mobile number" > </p>
+    <h1 style = "font-family:georgia,garamond,serif;font-size:20px;"><b>  For Office Use </b></h1>
+
+                                     <p><span> Admission Fee </span>
+                                         <input type="text" name="admission_fee" required class="form-control" placeholder="Enter Adm. fee"> INT</p>
+
+                                       <p><span> Monthly Fee </span>
+                                         <input type="text" name="monthly_fee" required class="form-control" placeholder="Monthly Fee"> INT</p>
+
+                                       <p><span> Class </span>
+                                         <input type="text" name="class_name" required class="form-control" placeholder="Enter Class"> </p>
+<br>
+                                       <p><span> Batch Time </span>
+                                         <input type="text" name="batch_time" required class="form-control" placeholder="Enter Batch Time"> </p>
+
+    <span>Remark</span>
+    <select name="remark" class="form-control" id="remark" required>
+        <option value="Fresh">Fresh</option>
+    </select><br>
+    <input type="text" name="other_remark" id="other_remark" placeholder="Enter other remark">
+</p>
+                                  <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="submitue" value="Submit"> </p>
+
+                                </form>
+								</div><br><br><br><br><br><br>
+
+	  </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
